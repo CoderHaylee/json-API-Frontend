@@ -4,16 +4,16 @@ import requests
 print("Content-Type: text/html",  end="\r\n\r\n", flush=True)
 print("<html>")
 print("<head>")
-print("<title>Jokes!</title>")
+print("<title>Title</title>")
 print("</head>")
 print("<body>")
 print("")
 
-jokerequest = requests.get("https://example.com/jsonAPI")
-jokedata = jokerequest.json()
+requestdata = requests.get("https://example.com/jsonAPI")
+datajson = requestdata.json()
 try:
-        joke = jokedata["text"]
-        print(joke)
+        data = datajson["text"]
+        print(data)
 except KeyError:
         print("There was a KeyError")
 
